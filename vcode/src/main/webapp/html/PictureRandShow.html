@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<head>
+    <title>随机生成图片</title>
+    <meta charset="UTF-8">
+    <link href="/css/login.css" rel="stylesheet">
+    <style>
+        .main_bar{
+            width:100%;
+            height:350px;
+            background-color:#6495ED;
+            margin-top:10%;
+        }
+        .title{
+            width:100%;
+            height:55px;
+            color:#ffffff;
+            border-bottom:1px solid #ffffff;
+            font-size:20pt;
+            font-family:"微软雅黑";
+            line-height:55px;
+            text-align:center;
+        }
+        .txt{
+            display:block;/*设置为独立块（换行）*/
+            width:70%;
+            margin:0 auto;
+            height:35px;
+            font-size:15pt;
+            border-radius:5px;/*设置圆角样式*/
+            border:0;
+            padding-left:8px;
+        }
+
+        .btn{
+            width:70%;
+            margin-left:15%;
+            height:40px;
+            border:0;
+            font-size:14pt;
+            font-family:"微软雅黑";
+            background-color:#FC5628;
+            color:#ffffff;
+            cursor:pointer;/*设置指针鼠标的样式*/
+            border-radius:20px;/*设置圆角样式*/
+            border:0;
+        }
+    </style>
+    <script src="/js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+        $(document).ready(function () {
+
+            pictureRand();
+
+        });
+
+        function  pictureRand() {
+            var ts=Math.random();
+            var url = window.location.toString();
+            $.ajax({
+
+                // 获取id，challenge，success（是否启用failback）
+                url: "/PictureRand", // 进行二次验证
+                type: "GET",
+
+                success: function (result) {
+                    var data = JSON.parse(result);
+                    $('#img1').attr("src",data.fullPicture);
+
+                    $('#img2').attr("src",data.bgPicture);
+                    $('#img3').attr("src",data.slicePicture);
+                },
+
+            });
+        }
+
+        //-->
+    </script>
+</head>
+<body>
+<div class="img"><img id="img1" src="" style="width:220px;height:220px"></div>
+<div class="img"><img id="img2" src="" style="width:220px;height:220px"></div>
+<div class="img"><img id="img3" src="" style="width:220px;height:220px"></div>
+</body>
+</html>

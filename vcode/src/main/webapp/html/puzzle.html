@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:c="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsf/composite"></html>
+<html>
+<head>
+    <title>滑动拼图验证demo</title>
+    <meta charset="UTF-8">
+    <link href="/css/login1.css" rel="stylesheet">
+    <style>
+        .main_bar{
+            width:100%;
+            height:350px;
+            background-color:#6495ED;
+            margin-top:10%;
+        }
+        .title{
+            width:100%;
+            height:55px;
+            color:#ffffff;
+            border-bottom:1px solid #ffffff;
+            font-size:20pt;
+            font-family:"微软雅黑";
+            line-height:55px;
+            text-align:center;
+        }
+		.bg_img img{
+		  width:100%;
+		  height:50%;
+		}
+		.slice_img img{
+		  width:165%;
+		  height:150%;
+		}
+        .txt{
+            display:block;/*设置为独立块（换行）*/
+            width:60%;
+            margin:0 auto;
+            height:35px;
+            font-size:15pt;
+            border-radius:5px;/*设置圆角样式*/
+            border:0;
+            padding-left:8px;
+        }
+
+        .btn{
+            width:70%;
+            margin-left:15%;
+            height:40px;
+            border:0;
+            font-size:14pt;
+            font-family:"微软雅黑";
+            background-color:#FC5628;
+            color:#ffffff;
+            cursor:pointer;/*设置指针鼠标的样式*/
+            border-radius:20px;/*设置圆角样式*/
+            border:0;
+        }
+    </style>
+    <script src="/js/jquery-1.12.1.min.js"></script>
+    <script src="/js/jquery.puzzle.js"></script>
+    <script src="/js/puzzle_ext.js"></script>
+    <!--<script type="text/javascript" charset="UTF-8">
+        $(document).ready(function () {
+
+            ajaxRequest();
+
+        });
+    </script>-->
+</head>
+<div class="main_bar">
+    <div id="login_form">
+        <div class="title">
+            滑动拼图验证demo
+        </div>
+            <div id="form_widget">
+                <br>
+                <input type="text" placeholder="请输入账号" id="box_name" class="txt" value="用户名" onfocus="this.value=''" onblur="if(this.value=='')this.value='用户名'"/>
+                <br>
+                <input type="password" placeholder="请输入密码" id="box_pass" class="txt" value="password" onfocus="this.value=''" onblur="if(this.value=='')this.value='password'"/>
+                <br>
+                <div id="slider">
+                <div id="slider_bg"></div>
+				    <div id="hidden" style="display:none">
+                    <div id="puzzle-background" class="bg_img"><img id="bgPicture" src="" ></div>
+                    <div id="puzzle-without-piece" hidden="hidden"></div>
+					<div id="puzzle-the-piece"class="slice_img"><img id="slicePicture" src=""></div>
+                    </div>
+				    <span id="label" onmousemove="showPic()" onmouseout="hiddenPic()">>></span>
+                    <span id="labelTip">拖动滑块验证</span> </div>
+					
+
+					  <form >
+		        <script>
+                    $(function () {
+                        var slider = new SliderUnlock("#slider",{
+                            successLabelTip : "验证成功"
+                        },function(){
+                        });
+                        slider.init();
+                    })
+                </script>
+                <div id="search_pass_link">
+                    <a href="#">忘记密码？</a>
+                </div>
+                <input type="hidden" id="Token" name="token" value=""/>
+                <input type="hidden" id="AppID" name="AppID" value=""/>
+                <input type="hidden" id="Validate" name="Validate" value="" />
+                <input type="button" id="loginBtn" value="登录" class="btn" onclick="Login()">
+                <br>
+                <div id="copyright">
+                    Power By CMB &copy;CopyRight 2017
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

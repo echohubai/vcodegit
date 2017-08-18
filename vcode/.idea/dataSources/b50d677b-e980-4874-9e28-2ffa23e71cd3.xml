@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="MSSQL" format-version="4.2">
+    <root id="1"/>
+    <database id="2" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+      <Current>1</Current>
+    </database>
+    <database id="3" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+    </database>
+    <database id="4" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+    </database>
+    <database id="5" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+    </database>
+    <database id="6" parent="1" name="ReportServer">
+      <ObjectId>5</ObjectId>
+    </database>
+    <database id="7" parent="1" name="ReportServerTempDB">
+      <ObjectId>6</ObjectId>
+    </database>
+    <database id="8" parent="1" name="PValidate">
+      <ObjectId>7</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="9" parent="8" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2017-08-17.11:29:20.790</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="10" parent="8" name="guest">
+      <ObjectId>2</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.697</IntrospectionTimestamp>
+    </schema>
+    <schema id="11" parent="8" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.720</IntrospectionTimestamp>
+    </schema>
+    <schema id="12" parent="8" name="sys">
+      <ObjectId>4</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.730</IntrospectionTimestamp>
+    </schema>
+    <schema id="13" parent="8" name="db_owner">
+      <ObjectId>16384</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.740</IntrospectionTimestamp>
+    </schema>
+    <schema id="14" parent="8" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.750</IntrospectionTimestamp>
+    </schema>
+    <schema id="15" parent="8" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.760</IntrospectionTimestamp>
+    </schema>
+    <schema id="16" parent="8" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.770</IntrospectionTimestamp>
+    </schema>
+    <schema id="17" parent="8" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.780</IntrospectionTimestamp>
+    </schema>
+    <schema id="18" parent="8" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.787</IntrospectionTimestamp>
+    </schema>
+    <schema id="19" parent="8" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.797</IntrospectionTimestamp>
+    </schema>
+    <schema id="20" parent="8" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.810</IntrospectionTimestamp>
+    </schema>
+    <schema id="21" parent="8" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+      <IntrospectionTimestamp>2017-07-26.19:47:00.820</IntrospectionTimestamp>
+    </schema>
+    <table id="22" parent="9" name="PICTURE">
+      <ObjectId>245575913</ObjectId>
+      <CreatedTimestamp>2017-07-26.17:35:15.257</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-26.17:35:15.267</ModifiedTimestamp>
+    </table>
+    <table id="23" parent="9" name="PictureModel">
+      <ObjectId>565577053</ObjectId>
+      <CreatedTimestamp>2017-08-17.11:03:48.287</CreatedTimestamp>
+      <ModifiedTimestamp>2017-08-17.11:03:48.300</ModifiedTimestamp>
+    </table>
+    <table id="24" parent="9" name="PictureSon">
+      <ObjectId>597577167</ObjectId>
+      <CreatedTimestamp>2017-08-17.11:05:54.920</CreatedTimestamp>
+      <ModifiedTimestamp>2017-08-17.11:05:54.930</ModifiedTimestamp>
+    </table>
+    <column id="25" parent="22" name="pid">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="26" parent="22" name="fullPicture">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="27" parent="22" name="slicePicture">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="28" parent="22" name="pictureParameter">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="29" parent="22" name="bgPicture">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="30" parent="22" name="pictureWidth">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="31" parent="22" name="pictureHeight">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="32" parent="22" name="sliceLeftTopX">
+      <Position>8</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="33" parent="22" name="sliceLeftTopY">
+      <Position>9</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="34" parent="22" name="PK_PICTURE">
+      <Position>1</Position>
+      <ColNames>pid</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="35" parent="22" name="PK_PICTURE">
+      <ObjectId>261575970</ObjectId>
+      <CreatedTimestamp>2017-07-26.17:35:15.260</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-26.17:35:15.260</ModifiedTimestamp>
+      <ColNames>pid</ColNames>
+      <UnderlyingIndexName>PK_PICTURE</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="23" name="pMid">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="23" name="fullPicture">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="38" parent="23" name="pictureWidth">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="39" parent="23" name="pictureHeight">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="40" parent="23" name="pNum">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="41" parent="23" name="pKid">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="42" parent="23" name="PK_PictureModel">
+      <Position>1</Position>
+      <ColNames>pMid</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="43" parent="23" name="PK_PictureModel">
+      <ObjectId>581577110</ObjectId>
+      <CreatedTimestamp>2017-08-17.11:03:48.293</CreatedTimestamp>
+      <ModifiedTimestamp>2017-08-17.11:03:48.293</ModifiedTimestamp>
+      <ColNames>pMid</ColNames>
+      <UnderlyingIndexName>PK_PictureModel</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="24" name="pSid">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="45" parent="24" name="bgPicture">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="46" parent="24" name="slicePicture">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="47" parent="24" name="sliceLeftTopX">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="48" parent="24" name="sliceLeftTopY">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="49" parent="24" name="pKid">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="50" parent="24" name="PK_PictureSon">
+      <Position>1</Position>
+      <ColNames>pSid</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="51" parent="24" name="PK_PictureSon">
+      <ObjectId>613577224</ObjectId>
+      <CreatedTimestamp>2017-08-17.11:05:54.923</CreatedTimestamp>
+      <ModifiedTimestamp>2017-08-17.11:05:54.923</ModifiedTimestamp>
+      <ColNames>pSid</ColNames>
+      <UnderlyingIndexName>PK_PictureSon</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

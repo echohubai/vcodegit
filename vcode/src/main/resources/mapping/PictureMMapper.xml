@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="vcode.dao.PictureMDao">
+
+    <resultMap id="PictureModelBaseMap" type="vcode.model.Picture">
+        <id column="pMid" property="pMid" jdbcType="BIGINT"/>
+        <result column="fullPicture" property="fullPicture" jdbcType="VARCHAR"/>
+        <result column="pictureWidth" property="pictureWidth" jdbcType="VARCHAR"/>
+        <result column="pictureHeight" property="pictureHeight" jdbcType="VARCHAR"/>
+        <result column="pNum" property="pNum" jdbcType="VARCHAR"/>
+        <result column="pKid" property="pKid" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+    <select id="selectPicture" parameterType="java.lang.Long" resultMap="PictureModelBaseMap">
+        SELECT * FROM PictureModel  ORDER BY pMid DESC
+    </select>
+
+    <select id="selectPictureM" parameterType="java.lang.Long" resultMap="PictureModelBaseMap">
+        SELECT * FROM PictureModel
+        WHERE pKid = #{pKid}
+    </select>
+
+    <select id="deletePicture" parameterType="java.lang.Long" resultMap="PictureModelBaseMap">
+        DELETE FROM PictureModel
+        WHERE pMid = #{pMid}
+    </select>
+
+    <select id="selectPictureById" parameterType="java.lang.Long" resultMap="PictureModelBaseMap">
+        SELECT * FROM PictureModel
+        WHERE pMid = #{pMid}
+    </select>
+    <insert id="save" parameterType="vcode.model.Picture" >
+        insert into PictureModel (fullPicture,pictureWidth,pictureHeight,pNum,pKid) values
+        (#{fullPicture},#{pictureWidth},#{pictureHeight},#{pNum},#{pKid})
+    </insert>
+
+
+
+
+</mapper>

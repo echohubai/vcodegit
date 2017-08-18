@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="@localhost" uuid="b50d677b-e980-4874-9e28-2ffa23e71cd3">
+      <database-info product="Microsoft SQL Server" version="11.00.3000" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 6.0 for SQL Server" driver-version="6.0.8112.100">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <user-name>sasasa</user-name>
+      <introspection-schemas>PValidate:dbo</introspection-schemas>
+    </data-source>
+  </component>
+</project>

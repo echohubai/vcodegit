@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="vcode:war">
+    <output-path>$PROJECT_DIR$/../vcode/target</output-path>
+    <root id="archive" name="vcode.war">
+      <element id="artifact" artifact-name="vcode:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <link href="/css/jquery-labelauty.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="/js/jquery-labelauty.js" type="text/javascript"></script>
+    <script src="/js/uploadPreview.js" type="text/javascript"></script>
+    <script>
+        window.onload = function () {
+            new uploadPreview({ UpBtn: "file1", DivShow: "imgdiv1", ImgShow: "imgShow1" });
+            new uploadPreview({ UpBtn: "file2", DivShow: "imgdiv2", ImgShow: "imgShow2" });
+            new uploadPreview({ UpBtn: "file3", DivShow: "imgdiv3", ImgShow: "imgShow3" });
+        }
+    </script>
+    <title>上传图片样本</title>
+</head>
+
+<body>
+
+<!--发布商品样式-->
+<div class="Inside_pages clearfix">
+
+    <div class="right_style">
+        <!--内容详细-->
+        <div class="title_style"><em></em>上传图片样本</div>
+        <div class="content_style">
+            <div class="Release_product_style">
+                <form action="/save.do" method="post" enctype="multipart/form-data">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+
+                        <tr><td class="label">full_picture照片：</td><td>
+                            <table class="Publicize_img_style">
+
+                                <tr class="label"><td >上传图片</td></tr>
+                                <tr>
+                                    <td>
+                                        <div id="imgdiv1"><img id="imgShow1" width="300" height="300" /></div>
+                                        <input type="file" id="file1" name="file1" id="doc-ipt-file-1" multiple="multiple">
+                                    </td></tr>
+                            </table>
+                        </td></tr>
+
+                        <tr><td class="label">bg_picture照片：</td><td>
+                            <table class="Publicize_img_style">
+
+                                <tr class="label"><td >上传图片</td></tr>
+                                <tr>
+                                    <td>
+                                        <div id="imgdiv2"><img id="imgShow2" width="300" height="300" /></div>
+                                        <input type="file" id="file2" name="file2" id="doc-ipt-file-2" multiple="multiple">
+                                    </td></tr>
+                            </table>
+                        </td></tr>
+
+
+                        <tr><td class="label">slice_picture照片：</td><td>
+                            <table class="Publicize_img_style">
+
+                                <tr class="label"><td >上传图片</td></tr>
+                                <tr>
+                                    <td>
+                                        <div id="imgdiv3"><img id="imgShow3" width="300" height="300" /></div>
+                                        <input type="file" id="file3" name="file3" id="doc-ipt-file-3" multiple="multiple">
+                                    </td></tr>
+                            </table>
+                        </td></tr>
+
+                    </table>
+                    <button type="submit"  class="am-btn am-btn-primary">确认添加</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $(':input').labelauty();
+    });
+</script>
+<!--网站地图-->
+
+</body>
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="vcode.dao.PictureSDao">
+
+    <resultMap id="PictureSonBaseMap" type="vcode.model.PictureSon">
+        <id column="pSid" property="pSid" jdbcType="BIGINT"/>
+        <result column="bgPicture" property="bgPicture" jdbcType="VARCHAR"/>
+        <result column="slicePicture" property="slicePicture" jdbcType="VARCHAR"/>
+        <result column="sliceLeftTopX" property="sliceLeftTopX" jdbcType="VARCHAR"/>
+        <result column="sliceLeftTopY" property="sliceLeftTopY" jdbcType="VARCHAR"/>
+        <result column="pKid" property="pKid" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+    <select id="selectPictureSByRand" parameterType="java.lang.Long" resultMap="PictureSonBaseMap">
+        SELECT * FROM PictureSon ORDER BY newid();
+    </select>
+
+    <select id="deletePictureSon" parameterType="java.lang.String" resultMap="PictureSonBaseMap">
+        DELETE FROM PictureSon WHERE pKid = #{pKid}
+    </select>
+
+    <insert id="save" parameterType="vcode.model.PictureSon" >
+        insert into PictureSon (bgPicture,slicePicture,sliceLeftTopX,sliceLeftTopY,pKid) values
+        (#{bgPicture},#{slicePicture},#{sliceLeftTopX},#{sliceLeftTopY},#{pKid})
+    </insert>
+
+
+</mapper>

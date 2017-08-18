@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="vcode.dao.PictureDao">
+
+    <resultMap id="PictureBaseMap" type="vcode.model.PictureModel">
+        <id column="pid" property="pid" jdbcType="BIGINT"/>
+        <result column="bgPicture" property="bgPicture" jdbcType="VARCHAR"/>
+        <result column="fullPicture" property="fullPicture" jdbcType="VARCHAR"/>
+        <result column="slicePicture" property="slicePicture" jdbcType="VARCHAR"/>
+        <result column="pictureWidth" property="pictureWidth" jdbcType="VARCHAR"/>
+        <result column="pictureHeight" property="pictureHeight" jdbcType="VARCHAR"/>
+        <result column="sliceLeftTopX" property="sliceLeftTopX" jdbcType="VARCHAR"/>
+        <result column="sliceLeftTopY" property="sliceLeftTopY" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+    <select id="selectPictureByRand" parameterType="java.lang.Long" resultMap="PictureBaseMap">
+        SELECT * FROM PICTURE ORDER BY newid();
+</select>
+    <insert id="save" parameterType="vcode.model.PictureModel" >
+        insert into PICTURE (fullPicture,bgPicture,slicePicture) values
+        (#{fullPicture},#{bgPicture},#{slicePicture})
+    </insert>
+
+
+</mapper>
