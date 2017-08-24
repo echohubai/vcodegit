@@ -11,7 +11,7 @@ function slideLogin() {
 
         $.ajax({
             type: "post",
-            url: "/slideLogin",
+            url: "/Login",
             data: {
                 username: username.val(),
                 password: password.val(),

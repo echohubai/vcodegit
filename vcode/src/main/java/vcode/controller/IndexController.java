@@ -15,9 +15,6 @@ import javax.annotation.Resource;
  */
 @Controller
 public class IndexController {
-    @Resource
-    private JedisService jedisService;
-    private String AppID = ConstantEnum.APPID.toString();
     /*
     * 滑块验证登录请求处理
     * */

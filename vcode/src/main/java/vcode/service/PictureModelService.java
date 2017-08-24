@@ -26,10 +26,12 @@ public interface PictureModelService {
     List<Picture> selectPictureModel();
     PictureModel  selectPictureMByRand();
 
-    void PictureLoadTest(HttpServletRequest request, CommonsMultipartFile file1,String num);
+
     void deletePictureById(Long pMid);
 
 
     PagedResult<Picture> queryByPage(Integer pageNo, Integer pageSize);
+
+    void SavePictureModel(HttpServletRequest request, CommonsMultipartFile file1,String num);
 
 }

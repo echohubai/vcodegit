@@ -237,15 +237,17 @@
     function sendTrace(trace){
         var token = document.getElementById("Token").value;
         var AppID = document.getElementById("AppID").value;
-        var url = window.location.toString();
+        var slideWidth = $('#labelTip').width();
+
         $.ajax({
             type: "POST",
-            url: url + "/SlideVerify",
+            url: "Verify",
             timeout:2000,
             data: {
                 trace:trace,
                 token:token,
-                AppID:AppID
+                AppID:AppID,
+                slideWidth:slideWidth
             },
             success: function (result) {
                 var data = JSON.parse(result);

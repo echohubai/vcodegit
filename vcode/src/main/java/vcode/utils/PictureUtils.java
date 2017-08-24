@@ -50,7 +50,6 @@ public class PictureUtils {
         int[][] mask = new int[width][height];
         for (int i = 0; i <width; i++) {
             for (int j = 0; j < height; j++) {
-                //值得注意的是contains(j,i)
                 mask[i][j] = g5.contains(i, j) ? 1 : 0;
             }
 

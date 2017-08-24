@@ -22,6 +22,8 @@ public class TraceUtils {
                 v[i] = (x[i] - x[i - 1]) / (t[i] - t[i - 1]);
             }
         }
+        System.out.print("最大X轴速度：" + StatisticUtils.getMax(v));
+        System.out.print("\n");
         return StatisticUtils.getAverage(v);
     }
     /*

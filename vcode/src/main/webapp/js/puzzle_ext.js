@@ -11,7 +11,7 @@ function Login() {
 
             $.ajax({
                 type: "POST",
-                url: "/puzzleLogin",
+                url: "/Login",
                 data: {
                     username: username.val(),
                     password: password.val(),

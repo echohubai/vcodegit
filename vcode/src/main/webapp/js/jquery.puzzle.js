@@ -255,11 +255,10 @@
     function sendTrace(trace){
         var token = document.getElementById("Token").value;
         var AppID = document.getElementById("AppID").value;
-        var url = window.location.toString();
         var slideWidth = $('#labelTip').width();
         $.ajax({
             type: "POST",
-            url: url + "/PuzzleVerify",
+            url: "Verify",
             timeout:2000,
             async:false,
             data: {

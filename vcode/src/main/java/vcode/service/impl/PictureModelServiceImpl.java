@@ -142,7 +142,6 @@ public class PictureModelServiceImpl implements PictureModelService {
         pictureModel.setSlicePicture(pictureSon.getSlicePicture());
         pictureModel.setSliceLeftTopX(pictureSon.getSliceLeftTopX());
         pictureModel.setSliceLeftTopY(pictureSon.getSliceLeftTopY());
-        System.out.print("11111");
         return pictureModel;
     }
 
@@ -198,10 +197,15 @@ public class PictureModelServiceImpl implements PictureModelService {
         return BeanUtil.toPagedResult(pictureMDao.selectPicture());
     }
 
+
+
+
+
     /*
      根据上传图片模板和切割次数进行切割处理
     */
-    public void PictureLoadTest(HttpServletRequest request, CommonsMultipartFile file1,String num) {
+    @Transactional
+    public void SavePictureModel(HttpServletRequest request, CommonsMultipartFile file1,String num) {
 
         Picture picture = new Picture();
         PictureSon pictureSon = new PictureSon();

@@ -18,7 +18,7 @@ import static vcode.utils.TraceUtils.getYVariance;
 
 /**
  * Created by hubai on 2017/7/24.
- * 验证失败服务
+ * 验证服务
  */
 @Service
 public class VerifyService {
@@ -71,7 +71,6 @@ public class VerifyService {
     public String getPuzzleVerifyResult(String trace,String token,String AppID,double sliderWidth) {
         logger=Logger.getLogger(VerifyService.class);
         //logger.info("PuzzleTrace:"+trace);
-
         JSONObject ret = new JSONObject();
         System.out.print("元素宽度" + sliderWidth);
         System.out.print("\n");
@@ -108,7 +107,7 @@ public class VerifyService {
                 jedisService.delParam(token);
                 return ret.toString();
             }
-        ret = pictureModelService.getPic(token,failedCount);
+        ret = pictureModelService.getPic(token,failedCount);//返回格给前端图片对象
         ret.put("flag",false);
         return ret.toString();
     }

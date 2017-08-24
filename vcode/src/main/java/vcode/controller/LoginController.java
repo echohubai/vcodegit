@@ -22,14 +22,9 @@ import javax.servlet.http.HttpSession;
 public class LoginController {
     @Resource
     private LoginService loginService;
-    @RequestMapping(value = "/puzzleLogin",method= RequestMethod.POST)
+    @RequestMapping(value = "/Login",method= RequestMethod.POST)
     @ResponseBody
     public Messager slideLogin( @RequestParam("token")String token,@RequestParam("username")String userName, @RequestParam("password")String passWord,@RequestParam("validate")String validate){
        return loginService.login(userName,validate,passWord,token);
-    }
-    @RequestMapping(value = "/slideLogin",method= RequestMethod.POST)
-    @ResponseBody
-    public Messager puzzleLogin( @RequestParam("token")String token,@RequestParam("username")String userName, @RequestParam("password")String passWord,@RequestParam("validate")String validate){
-        return loginService.login(userName,validate,passWord,token);
     }
 }
